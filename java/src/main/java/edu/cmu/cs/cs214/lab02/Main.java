@@ -1,14 +1,18 @@
 package edu.cmu.cs.cs214.lab02;
 
-import edu.cmu.cs.cs214.lab02.shapes.*;
+import edu.cmu.cs.cs214.lab02.shapes.Shape;
+import edu.cmu.cs.cs214.lab02.shapes.Circle;
+import edu.cmu.cs.cs214.lab02.shapes.Rectangle;
 
 public class Main {
     public static void main(String[] args) {
-        Shape rectangle = new Rectangle(2, 3);  // 使用 Shape 接口
-        
-        Renderer renderer = new Renderer(rectangle);
-        
-        renderer.draw();
+        Shape rectangle = new Rectangle(2, 3);
+        Shape circle = new Circle(2);
+
+        Renderer recRenderer = new Renderer(rectangle);
+        Renderer circleRenderer = new Renderer(circle);
+
+        recRenderer.draw();
+        circleRenderer.draw();
     }
 }
-
